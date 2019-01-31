@@ -1,15 +1,13 @@
 #! /bin/bash
 
-if [ $1 == "" ]
+if [ -z $1 ]
 then
-        echo " "
-        echo "------------------------------------------"
-        echo "-                                        -"
-        echo "---- Desenvolvido por Eric Rodrigues  ----"
-        echo "---- Modo de uso :        alvo.com.br ----"
-        echo "----    Ericrodrigo999@gmail.com      ----"
-        echo "-                                        -"
-        echo "------------------------------------------"
+	echo " "
+        echo "============================================================"
+        echo "Desenvolvido por Eric Rodrigues"
+	echo "Modo de uso : ./descobre http://alvo.com.br "
+        echo "Ericrodrigo999@gmail.com"
+        echo "============================================================"
         echo " "
 else
         echo " "
