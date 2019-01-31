@@ -6,7 +6,7 @@ then
         echo "------------------------------------------"
         echo "-                                        -"
         echo "---- Desenvolvido por Eric Rodrigues  ----"
-	echo "---- Modo de uso : http://alvo.com.br ----"
+	echo "---- Modo de uso : $1 http://alvo.com.br -"
         echo "----    Ericrodrigo999@gmail.com      ----"
 	echo "-                                        -"
         echo "------------------------------------------"
