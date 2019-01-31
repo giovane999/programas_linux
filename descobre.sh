@@ -17,7 +17,7 @@ else
 	echo " "
 
 	#Diretorio#
-	for palavra in $(cat /usr/share/dirb/wordlists/common.txt)
+	for palavra in $(cat rato.txt)
 
 	do
 		resposta1=$(curl -s -o /dev/null -w "%{http_code}" $1/$palavra/)
