@@ -4,7 +4,7 @@
 from urllib.request import urlopen
 import socket, os 
 
-
+# EXPRESSAO REGULAR 
 #Pega a URL
 print("Ex: http://testphp.vulnweb.com/listproducts.php?cat=1\n")
 url = input("Digite a url: ")
@@ -20,10 +20,7 @@ print("\n-----------------------------------------------------------------------
 pagina = urlopen(p) 
 texto = pagina.read().decode('utf8')
 
-#remove os espacamentos da tecla TAB
-#texto = texto.replace("\t", "")
  
-
 
 # manipulando arquivos em python:
 
@@ -36,10 +33,25 @@ arquivo = open('texto.txt', 'r')
 texto = arquivo.read()
 arquivo.close()
 
+
+
 os.system("clear")
 for linha in open("texto.txt"):
     if 'sql' in linha:
-       print("\nRESULTADOS\n==============================================================================\n\n \033[31m Vulneravel \033[m ->",url)
-       print(" \033[31m Erro \033[m ->",linha,"\n==============================================================================\n")
- 
+       print("\nRESULTADOS")
+       print("\n==============================================================================\n")    
+       print("\033[31m Vulneravel \033[m ->",url)
+       print("\033[31m Erro \033[m ->",linha)
+       print("\n===============================================================================\n")
+
+
+
+for linha in open("texto.txt"):
+    if 'sintax' in linha:
+       print("\nRESULTADOS")
+       print("\n==============================================================================\n")    
+       print("\033[31m Vulneravel \033[m ->",url)
+       print("\033[31m Erro \033[m ->",linha)
+       print("\n===============================================================================\n")
+
 os.system("rm texto.txt")
